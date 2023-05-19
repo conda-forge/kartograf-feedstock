@@ -26,6 +26,7 @@ requirements:
     - python >=3.9
     - rdkit
     - scipy
+    - gufe
 
 test:
   imports:
