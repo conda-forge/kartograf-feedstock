@@ -1,5 +1,5 @@
 {% set name = "kartograf" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kartograf-{{ version }}.tar.gz
-  sha256: adea6c3e1c2fb7a233da15b31a8898b0f913016ed22ad42007faf5ab87495c84
+  sha256: 1574eae2485f61c21733798a459603b77018236a4aaba9495eb289e80d4b46f5
 
 build:
   noarch: python
@@ -26,6 +26,7 @@ requirements:
     - python >=3.9
     - rdkit
     - scipy
+    - gufe
 
 test:
   imports:
