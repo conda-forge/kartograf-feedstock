@@ -21,7 +21,6 @@ requirements:
     - setuptools >=61.0
     - versioningit
   run:
-    - networkx
     - numpy
     - python >=3.9
     - rdkit
