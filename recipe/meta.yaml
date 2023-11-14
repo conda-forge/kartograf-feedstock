@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kartograf-{{ version }}.tar.gz
-  sha256: f21d00a78b0c0dfabdd9eb4a9600d104b9a027525e9270f80d5c2af6039ca1b7
+  sha256: 7fae33b54cb533d7ec81b0a8b61c4ebd87697d2105e4ff9e5ad086bfcdfe0b28
 
 build:
   noarch: python
