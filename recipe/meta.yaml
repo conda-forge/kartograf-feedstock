@@ -21,12 +21,12 @@ requirements:
     - setuptools >=61.0
     - versioningit
   run:
+    - gufe >=0.9.5
     - numpy
-    - python >=3.9
     - py3Dmol
+    - python >=3.9
     - rdkit
     - scipy
-    - gufe
 
 test:
   imports:
