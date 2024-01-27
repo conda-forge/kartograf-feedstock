@@ -1,5 +1,5 @@
 {% set name = "kartograf" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kartograf-{{ version }}.tar.gz
-  sha256: 7fae33b54cb533d7ec81b0a8b61c4ebd87697d2105e4ff9e5ad086bfcdfe0b28
+  sha256: 9ba7f108e116c1c37721c385cc1caeb176d4c54076b07df8d29660699a5f6ee2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   host:
