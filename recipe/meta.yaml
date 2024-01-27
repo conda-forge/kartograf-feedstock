@@ -21,7 +21,8 @@ requirements:
     - setuptools >=61.0
     - versioningit
   run:
-    - gufe >=0.9.5
+    - dill
+    - gufe >=0.10
     - numpy
     - py3Dmol
     - python >=3.9
