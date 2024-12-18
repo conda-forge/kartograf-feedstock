@@ -35,8 +35,8 @@ test:
   imports:
     - kartograf
   source_files:
-    - src/kartograf/tests/data/2wtk_mutated_with_extra_mols.pdb
-    - src/kartograf/tests/data/2wtk_trimer_with_extra_mols.pdb
+    - kartograf/tests/data/2wtk_mutated_with_extra_mols.pdb
+    - kartograf/tests/data/2wtk_trimer_with_extra_mols.pdb
   requires:
     - pip
     - pytest
