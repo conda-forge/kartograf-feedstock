@@ -34,9 +34,9 @@ requirements:
 test:
   imports:
     - kartograf
-  source_files:
-    - src/kartograf/tests/data/*.pdb
-    - src/kartograf/tests/data/*.sdf
+  files:
+    - kartograf/tests/data/*.pdb
+    - kartograf/tests/data/*.sdf
   requires:
     - pip
     - pytest
