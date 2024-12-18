@@ -1,13 +1,15 @@
 {% set name = "kartograf" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kartograf-{{ version }}.tar.gz
-  sha256: 9ba7f108e116c1c37721c385cc1caeb176d4c54076b07df8d29660699a5f6ee2
+  git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
+  git_rev: v{{ version }}
+  git_depth: -1
 
 build:
   noarch: python
@@ -17,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - versioningit
   run:
@@ -25,7 +27,7 @@ requirements:
     - gufe >=0.10
     - numpy
     - py3Dmol
-    - python >=3.9
+    - python {{ python_min }}
     - rdkit
     - scipy
 
@@ -35,6 +37,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest --pyargs kartograf
 
