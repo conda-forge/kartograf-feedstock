@@ -24,7 +24,7 @@ requirements:
     - versioningit
   run:
     - dill
-    - gufe >=0.10
+    - gufe >=1.0
     - numpy
     - py3Dmol
     - python {{ python_min }}
