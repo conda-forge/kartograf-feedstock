@@ -27,7 +27,7 @@ requirements:
     - gufe >=1.0
     - numpy
     - py3Dmol
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - rdkit
     - scipy
 
