@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,7 +24,8 @@ requirements:
     - versioningit
   run:
     - dill
-    - gufe >=1.0
+    - gufe >=1.0,<1.3.0
+    - ipywidgets
     - numpy
     - py3Dmol
     - python >={{ python_min }}
