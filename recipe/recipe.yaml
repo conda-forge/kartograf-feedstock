@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://github.com/${{ owner }}/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: c15bb78679b2c1d4da80587e7e13a89f4930404caaec90d4aaeeabe450f90e49
+  sha256: f50eab3ed120e1ed03f02446d2cb5bd8b995d838939734c9aa3a5a96208f9344 
 
 build:
   number: 0
