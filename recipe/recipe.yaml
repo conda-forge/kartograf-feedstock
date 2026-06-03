@@ -1,6 +1,7 @@
 schema_version: 1
 
 context:
+  owner: ${{ OpenFreeEnergy }}
   name: kartograf
   version: 1.2.0
   python_min: 3.10
@@ -10,9 +11,8 @@ package:
   version: ${{ version }}
 
 source:
-  git: https://github.com/OpenFreeEnergy/${{ name }}.git
-  rev: v${{ version }}
-  depth: -1
+  url: https://github.com/${{ owner }}/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: c15bb78679b2c1d4da80587e7e13a89f4930404caaec90d4aaeeabe450f90e49
 
 build:
   number: 1
@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - pip
-    - python 3.10.*
+    - python ${{ python_min }}.*
     - setuptools >=61.0
     - versioningit
   run:
@@ -40,7 +40,7 @@ tests:
       imports:
         - kartograf
       pip_check: false
-      python_version: ${{ python_min }}
+      python_version: ==${{ python_min }}
   - requirements:
       run:
         - pip
