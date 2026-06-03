@@ -3,8 +3,8 @@ schema_version: 1
 context:
   owner: "OpenFreeEnergy" 
   name: kartograf
-  version: "1.2.0"
-  python_min: "3.10"
+  version: "2.0"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -28,9 +28,7 @@ requirements:
   run:
     - dill
     - gufe >=1.0
-    - ipywidgets
     - numpy
-    - py3Dmol
     - python >=${{ python_min }}
     - rdkit
     - scipy
@@ -46,6 +44,8 @@ tests:
         - pip
         - pytest
         - python ${{ python_min }}.*
+        - py3Dmol
+        - ipywidgets
     script:
       - pytest --pyargs kartograf
 
