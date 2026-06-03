@@ -3,8 +3,8 @@ schema_version: 1
 context:
   owner: "OpenFreeEnergy" 
   name: kartograf
-  version: "1.2.0"
-  python_min: "3.10"
+  version: "2.0.0"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -12,10 +12,10 @@ package:
 
 source:
   url: https://github.com/${{ owner }}/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: c15bb78679b2c1d4da80587e7e13a89f4930404caaec90d4aaeeabe450f90e49
+  sha256: f1afff568478f287f48216ab5655b7253e85bd07008155f608e046f763f89ff2
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -27,10 +27,8 @@ requirements:
     - versioningit
   run:
     - dill
-    - gufe >=1.0
-    - ipywidgets
-    - numpy
-    - py3Dmol
+    - gufe >=1.11
+    - numpy ~=2.0
     - python >=${{ python_min }}
     - rdkit
     - scipy
@@ -46,6 +44,8 @@ tests:
         - pip
         - pytest
         - python ${{ python_min }}.*
+        - py3Dmol
+        - ipywidgets
     script:
       - pytest --pyargs kartograf
 
