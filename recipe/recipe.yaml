@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  owner: ${{ OpenFreeEnergy }}
+  owner: "OpenFreeEnergy" 
   name: kartograf
   version: "1.2.0"
   python_min: "3.10"
@@ -40,7 +40,7 @@ tests:
       imports:
         - kartograf
       pip_check: false
-      python_version: ${{ python_min }}
+      python_version: ==${{ python_min }}
   - requirements:
       run:
         - pip
