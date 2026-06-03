@@ -3,7 +3,7 @@ schema_version: 1
 context:
   owner: "OpenFreeEnergy" 
   name: kartograf
-  version: "2.0"
+  version: "2.0.0"
   python_min: "3.11"
 
 package:
@@ -27,8 +27,8 @@ requirements:
     - versioningit
   run:
     - dill
-    - gufe >=1.0
-    - numpy
+    - gufe >=1.11
+    - numpy ~=2.0
     - python >=${{ python_min }}
     - rdkit
     - scipy
