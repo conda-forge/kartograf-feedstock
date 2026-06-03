@@ -1,0 +1,67 @@
+schema_version: 1
+
+context:
+  owner: "OpenFreeEnergy" 
+  name: kartograf
+  version: "1.2.0"
+  python_min: "3.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/${{ owner }}/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: c15bb78679b2c1d4da80587e7e13a89f4930404caaec90d4aaeeabe450f90e49
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools >=61.0
+    - versioningit
+  run:
+    - dill
+    - gufe >=1.0
+    - ipywidgets
+    - numpy
+    - py3Dmol
+    - python >=${{ python_min }}
+    - rdkit
+    - scipy
+
+tests:
+  - python:
+      imports:
+        - kartograf
+      pip_check: false
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - pytest
+        - python ${{ python_min }}.*
+    script:
+      - pytest --pyargs kartograf
+
+about:
+  summary: Kartograf is a package for mapping geometrically atoms of two molecules. (like you need it with hybrid topology)
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/OpenFreeEnergy/kartograf
+
+extra:
+  recipe-maintainers:
+    - jthorton
+    - hannahbaumann
+    - atravitz
+    - dwhswenson
+    - ialibay
+    - mikemhenry
+    - richardjgowers
+    - riesben
