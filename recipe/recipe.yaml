@@ -28,7 +28,7 @@ requirements:
   run:
     - dill
     - gufe >=1.11
-    - numpy ~=2.0
+    - numpy
     - python >=${{ python_min }}
     - rdkit
     - scipy
